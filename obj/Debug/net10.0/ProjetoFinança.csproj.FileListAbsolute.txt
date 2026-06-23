@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\bin\Debug\net10.0\ProjetoFinança.exe
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\bin\Debug\net10.0\ProjetoFinança.deps.json
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\bin\Debug\net10.0\ProjetoFinança.runtimeconfig.json
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\bin\Debug\net10.0\ProjetoFinança.dll
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\bin\Debug\net10.0\ProjetoFinança.pdb
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.AssemblyInfo.cs
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.dll
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\refint\ProjetoFinança.dll
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.pdb
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ProjetoFinança.genruntimeconfig.cache
+C:\Users\user\Desktop\Estudo C#\CSharp\ProjetoFinança\obj\Debug\net10.0\ref\ProjetoFinança.dll
