@@ -1,0 +1,13 @@
+# Pastas de compilação (Arquivos gerados pelo VS)
+bin/
+obj/
+
+# Configurações locais do Visual Studio e IDEs
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos de log
+*.log
