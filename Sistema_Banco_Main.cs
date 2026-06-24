@@ -10,6 +10,8 @@ namespace ProjetoFinança
     {
         public string Titular { get; private set; }
         public float Saldo { get; protected set; }
+        public List<string> HistoricoExtrato { get; set; } = new List<string>();
+
 
         public ContaBancaria(string Nome, float saldoInicial)
         {
@@ -20,6 +22,45 @@ namespace ProjetoFinança
         public void ExibirStatus()
         {
             Console.WriteLine($"Titular: {Titular} | Saldo: {Saldo}");
+        }
+
+        public void ExibirHistorico()
+        {
+            Console.Clear();
+            Console.WriteLine("=== Extrato Bancário ===");
+
+            if (HistoricoExtrato.Count() == 0)
+            {
+                Console.WriteLine("Nenhuma tansação foi realizada nesta conta até o momento.");
+            }
+
+            else
+            {
+                foreach(string tansacao in HistoricoExtrato)
+                {
+                    string[] partes = tansacao.Split('|');
+
+                    Console.Write(partes[0]);
+
+                    if (partes[0].Contains("DEPOSITO"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    }
+
+                    Console.Write(partes[1]);
+                    Console.ResetColor();
+                    Console.WriteLine();
+                }
+            }
+
+            Console.WriteLine("\n=====================");
+            Console.WriteLine("Pressione ENTER para voltar ao menu principal.");
+            Console.ReadLine();
         }
 
         public void Depositar()
@@ -41,6 +82,7 @@ namespace ProjetoFinança
                     if (deposito > 0)
                     {
                         Saldo = Saldo + deposito;
+                        HistoricoExtrato.Add($"[DEPOSITO] | +R${deposito}");
                         Console.WriteLine($"Um deposito no valor de R${deposito} foi realizado. Seu novo saldo é de R${Saldo}.");
                         break;
                     }
@@ -77,6 +119,7 @@ namespace ProjetoFinança
                     if (saque > 0 && Saldo > saque)
                     {
                         Saldo = Saldo - saque;
+                        HistoricoExtrato.Add($"[SAQUE] | -R${saque}");
                         Console.WriteLine($"Um saque no valor de R${saque} foi realizado. Seu novo saldo é de R${Saldo}.");
                         break;
                     }
@@ -128,8 +171,10 @@ namespace ProjetoFinança
                     Console.WriteLine("4 - Render Juros");
                 }
 
+                Console.WriteLine("5 - Exibir Historico de transações");
+                
                 string textoAlternar = (contaAtiva == contaComum) ? "poupança" : "comum";
-                Console.WriteLine($"5 - Alternar conta para {textoAlternar}");
+                Console.WriteLine($"6 - Alternar conta para {textoAlternar}");
                 Console.WriteLine("0 - Sair do App");
 
 
@@ -145,7 +190,9 @@ namespace ProjetoFinança
                     poupança.Render();
                 }
 
-                else if (escolha == "5")
+                else if (escolha == "5") contaAtiva.ExibirHistorico();
+
+                else if (escolha == "6")
                 {
                     // A MÁGICA DA ALTERNÂNCIA:
                     if (contaAtiva == contaComum)
